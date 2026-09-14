@@ -56,7 +56,7 @@
 		right: 3vw;
 		pointer-events: none;
 		user-select: none;
-		z-index: 500;
+		z-index: 400;
 	}
 
 	.photo {
@@ -80,7 +80,6 @@
 		content:
 		" ";
 		position: fixed;
-		z-index: 20;
 		background-position-x: center;
 	}
 	.tutorialcont::before{
@@ -150,6 +149,7 @@
 		animation-duration: 4s;
 		animation-fill-mode: forwards;
 		animation-timing-function: linear;
+		
 	}
 
 	.blackout2 {
@@ -178,7 +178,6 @@
 
 
 
-
 	@keyframes lightflicker{
 		0% {background-color:#000000FF;}
 		80% {background-color:#0000003d;}
@@ -186,63 +185,6 @@
 		90% {background-color:#0000003d;}
 		95% {background-color:#00000078;}
 		100% {background-color:#00000000;}
-	}
-
-
-	#photo0{
-		position: fixed;
-		left: 20vw;
-		top: 20vw;
-	}
-
-	#str0a, #str0b{
-		height: 24vw;
-		transform: rotate(130deg);
-		left: calc((var(--width)/2.1) + 20vw);
-		top: calc((var(--width) / 53.8) + 20vw);
-	}
-
-	#pin0 {
-		left: calc((var(--width)/2.3) + 20vw);
-		top: calc((var(--width) / -22) + 20vw);
-	}
-
-
-	#photo1{
-		position: fixed;
-		left: 40vw;
-		top: 12vw;
-	}
-
-	#str1a, #str1b {
-		height: 22.1vw;
-		transform: rotate(68.1deg);
-		left: calc((var(--width)/2.1) + 40vw);
-		top: calc((var(--width) / 53.8) + 12vw);
-	}
-	#pin1 {
-		left: calc((var(--width)/2.3) + 40vw);
-		top: calc((var(--width) / -22) + 12vw);
-	}
-
-
-
-	#photo2{
-		position: fixed;
-		left: 2vw;
-		top: 5vw;
-	}
-
-	#str2a, #str2b {
-		height: 39vw;
-		transform: rotate(280.5deg);
-		left: calc((var(--width)/2.1) + 2vw);
-		top: calc((var(--width) / 53.8) + 5vw);
-	}
-
-	#pin2 {
-		left: calc((var(--width)/2.3) + 2vw);
-		top: calc((var(--width) / -22) + 5vw);
 	}
 
 	@keyframes spin{
@@ -260,6 +202,23 @@
 		pointer-events: none;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -339,7 +298,6 @@ body {
     content:
     " ";
     position: fixed;
-    z-index: 20;
     background-position-x: center;
 }
 .tutorialcont::before{
@@ -409,7 +367,7 @@ body {
 	right: 3vh;
 	pointer-events: none;
 	user-select: none;
-	z-index: 500;
+	z-index: 400;
 }
 
 #blackout {
