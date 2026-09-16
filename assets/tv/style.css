@@ -1,0 +1,180 @@
+body{
+	margin:0;
+	filter:brightness(0);
+	animation-name:lighton;
+	animation-delay: 0.5s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	overflow:hidden;
+	user-select:none;
+}
+.screen{
+	width:100%;
+	height:100%;
+}
+.overlay {
+    background-size: cover;
+    background-image: url(./images/overlay.png);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+}
+.remote {
+    background-size: cover;
+    background-image: url(./images/remote.png);
+    background-position: center;
+    width: 16vw;
+    height: 23vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 20;
+    bottom: 0vw;
+    right: 0vw;
+    filter: brightness(0.7) drop-shadow(8px 8px 8px black);
+}
+.buttoncover{
+	background-image: url(./images/buttoncover.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+	position: absolute;
+	background-position: bottom right;
+}
+.buttoncase {
+    position: absolute;
+    width: 75.8%;
+    height: 23.9%;
+    bottom: 34%;
+    right: 9.2%;
+    z-index: 30;
+    filter: brightness(0.7);
+}
+.rbutton {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: auto;
+    z-index: 5;
+    cursor: pointer;
+}
+.remotecase {
+	background-size: cover;
+	background-image: url(./images/void.png);
+	background-position: center;
+	width: 16vw;
+	height: 23vw;
+	position: fixed;
+	z-index: 2;
+	bottom: -4vw;
+	right: 0vw;
+}
+#button1 {
+    background-image: url(./images/button1.png);
+	width: 16.5%;
+    height: 79.7%;
+    position: absolute;
+    bottom: 5.9%;
+    right: 72.7%;
+}
+#button2 {
+    background-image: url(./images/button2.png); 
+    width: 16.5%;
+    height: 79.7%;
+    position: absolute;
+    z-index: 5;
+    bottom: 5.9%;
+    right: 51.9%;
+}
+#button3 {
+    background-image: url(./images/button3.png);
+    width: 16.6%;
+    height: 76.9%;
+    position: absolute;
+    z-index: 5;
+    bottom: 6.8%;
+    right: 29.8%;
+}
+#button4 {
+    background-image: url(./images/button4.png);
+    width: 16.6%;
+    height: 79.8%;
+    position: absolute;
+    z-index: 5;
+    bottom: 4.9%;
+    right: 9%;
+}
+
+.rbutton:hover {
+	filter: brightness(1.2);
+}
+.rbutton:active {
+	transform: translateX(-0.3vw);
+	filter: brightness(0.8);
+}
+
+
+
+.ui {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.videoholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: black;
+    z-index: 5;
+}
+
+.videoslide {
+    width: 65%;
+    height: 100%;
+    z-index: 5;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+@keyframes lighton{
+	0% {filter:brightness(0);}
+	100% {filter:brightness(1);}
+}
+.channelnum {
+    font-size: 2vw;
+    position: absolute;
+    width: 7.1vw;
+    height: 2.4vw;
+    background: #ffffffa6;
+    top: 0.6vw;
+    left: 1.3vw;
+    border-radius: 0 0 1vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workbench {
+  font-family: "Workbench", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}

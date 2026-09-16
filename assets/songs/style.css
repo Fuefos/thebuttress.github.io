@@ -1,0 +1,63 @@
+@media only screen and (orientation: portrait){
+	.office{
+		/* rotate:90deg; */
+	}
+}
+body {
+	margin: 0;
+	overflow: hidden;
+	background-color: black;
+	display: flex;
+}
+.office{
+	background-image: url(./images/background.png);
+	background-repeat: no-repeat;
+	background-size: 100vw;
+	background-color: black;
+	background-position: bottom left;
+	width: 100%;
+	overflow: hidden;
+	aspect-ratio: 16/9;
+	background-attachment: fixed;
+}
+
+#tv {
+    background-image: url(./images/tv.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: calc((100vw/3840)*305);
+    width: calc((100vw/3840)*479);
+    bottom: 24.71355vw;
+    left: 33.047vw;
+}
+#pinboard {
+    background-image: url(./images/corkboard.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: calc((100vw/3840)*727);
+    height: calc((100vw/3840)*481);
+    bottom: 28.724vw;
+    left: 63.724vw;
+}
+#drawers {
+    background-image: url(./images/drawers.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: calc((100vw/3840)*826);
+    height: calc((100vw/3840)*630);
+    bottom: 13.28125vw;
+    left: 72.526vw;
+}
+#songs {
+    background-image: url(./images/walkman.png);
+    background-repeat: no-repeat;
+}
+
+.navbutton {
+    position: absolute;
+    filter: drop-shadow(2px 2px 4px black);
+}
+.navbutton:hover {
+    filter: brightness(1.20);
+	transform: scale(1.05);
+}

@@ -1,0 +1,271 @@
+
+
+@media (scripting:none){
+		#blackout {
+			animation-name: lightflicker;
+		}
+	}
+
+
+
+
+
+@media only screen and (orientation: landscape){
+	:root {
+	  --width: 11vw;
+	  --scaler: vw;
+	}
+	.tutorialcont {
+		bottom: 5vh;
+		right: 3vw;
+	}
+}
+@media only screen and (orientation: portrait){
+	:root {
+	  --width: 11vh;
+	  --scaler: vh;
+	}
+	.tutorialcont {
+		bottom: 5vw;
+		right: 3vh;
+	}
+}
+
+	body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	.returnbutton {
+		background-image: url(../global/images/back.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: calc(var(--width)/2);
+		height: calc(var(--width)/2);
+		position: fixed;
+		top: 0;
+		left: 0;
+		filter: brightness(0.8);
+		z-index:5000;
+		transform-origin: top left;
+	}
+	.returnbutton:hover {
+		filter: brightness(1);
+		z-index: 1400;
+		transform: scale(1.05);
+	}
+	.pinboard{
+		position: fixed;
+		background-image: url(./images/background1.jpg);
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		background-repeat: repeat;
+		background-size: calc(var(--width)*4);
+		border: calc(var(--width)/7.04) solid transparent;
+		border-image: url(./images/border1.jpg) 24% round;
+		box-sizing: border-box;
+		box-shadow: inset calc(var(--width)/105.6001) calc(var(--width)/105.6001) calc(var(--width)/13.2) calc(var(--width)/211.1997) black;
+	}
+
+	.photocont {
+		position: fixed;
+		background-image: url(./images/polaroid.jpg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: var(--width);
+		height: calc((var(--width) / 427) * 516);
+		filter: brightness(0.9);
+		box-shadow: calc(var(--width)/42.239962) calc(var(--width)/42.239962) calc(var(--width)/21.12001) black, inset -1px -1px 0px 0px black;
+		z-index: 100;
+		background-color: black;
+	}
+
+	.tutorialcont {
+		position: fixed;
+		background-image: url(./images/tutorial.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: var(--width);
+		height: calc((var(--width) / 438) * 264);
+		filter: brightness(0.9);
+		box-shadow: calc(var(--width)/42.239962) calc(var(--width)/42.239962) calc(var(--width)/21.12001) black, inset -1px -1px 0px 0px black;
+		pointer-events: none;
+		user-select: none;
+		z-index: 300;
+	}
+
+	.photo {
+		position: relative;
+		left: calc(var(--width)*0.069);
+		top: calc(var(--width)*0.065);
+		background-color: #000000;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: calc(var(--width)*0.877);
+		height: calc(var(--width)*0.898);
+		overflow: clip;
+		display: flex;
+		justify-content: center;
+	}
+	.photoinner {width: 100%;
+	    object-fit: contain;
+	}
+
+	.tutorialcont::before{
+		background-image: url(./images/pin2.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: var(--width);
+		height: calc(var(--width)*0.17365);
+		top: calc(var(--width)*-0.052085);
+		content:
+		" ";
+		position: fixed;
+		background-position-x: center;
+	}
+
+	.tutorialcont::after{
+		background-image: url(./images/handprint.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: calc(var(--width)*1.5);
+		height: calc(var(--width)*2.17365);
+		top: calc(var(--width)*-0.452085);
+		content:
+		" ";
+		position: fixed;
+		right: calc((var(--width) * -0.2));
+		filter: opacity(0);
+		animation-name: yellowpaint;
+		animation-duration: 600s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+	}
+
+	.photocont:hover {
+		filter: brightness(1);
+		z-index: 1400;
+	}
+
+	.crafty-girls-regular {
+	  font-family: "Crafty Girls", cursive;
+	  font-weight: 400;
+	  font-style: normal;
+	}
+	.phototext {
+		position: fixed;
+		width: 100%;
+		height: 20.5%;
+		bottom: 0;
+		box-sizing: border-box;
+		padding: 5%;
+		display: flex;
+		font-weight: bold;
+		font-size: calc(var(--width)/10);
+		color: black;
+		overflow: hidden;
+		text-wrap: nowrap;
+		justify-content: center;
+	}
+	.tutorialtext {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		box-sizing: border-box;
+		padding: 5% 10%;
+		display: flex;
+		align-items: center;
+		font-size: calc(var(--width)/11);
+		color: black;
+	}
+
+
+
+	.pin {
+		background-image: url(./images/pin.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: calc(var(--width)/6.863);
+		height: calc(var(--width)*0.17365);
+		z-index: 500;
+		position: fixed;
+		pointer-events: none;
+	}
+
+
+
+
+	#blackout {
+		background: #000000;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 1000;
+		pointer-events: none;
+		animation-duration: 4s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+		top: 0;
+		left: 0;
+	}
+
+	.blackout2 {
+		position: fixed;
+		top: -19.9vh;
+		left: -48vw;
+		width: 0;
+		height: 0;
+		border-left: 50vw solid transparent;
+		border-right: 39vw solid transparent;
+		border-top: 140vh solid #00000075;
+		filter: blur(2vw);
+	}
+
+	.blackout3 {
+		position: fixed;
+		top: -19.9vh;
+		right: -48vw;
+		width: 0;
+		height: 0;
+		border-right: 50vw solid transparent;
+		border-left: 39vw solid transparent;
+		border-top: 140vh solid #00000075;
+		filter: blur(2vw);
+	}
+
+
+
+	@keyframes lightflicker{
+		0% {background-color:#000000FF;pointer-events: all;}
+		80% {background-color:#0000003d;pointer-events: all;}
+		85% {background-color:#00000078;}
+		90% {background-color:#0000003d;}
+		95% {background-color:#00000078;}
+		100% {background-color:#00000000; pointer-events: none;}
+	}
+
+	@keyframes spin{
+		from {transform: rotate(0deg);}
+		50% {transform: rotate(180deg);}
+		to {transform: rotate(365deg);}
+	}
+		
+	@keyframes yellowpaint{
+		0% {filter: opacity(0)}
+		50% {filter: opacity(0)}
+		100% {filter: opacity(0.6)}
+	}
+		
+	.string {
+		z-index: 200;
+		position: fixed;
+		width: calc(var(--width) / 22);
+		height: 0;
+		background-color: red;
+		transform-origin: 50% calc(var(--width) / 44);
+		border-radius: calc(var(--width) / 11);
+		pointer-events: none;
+	}
